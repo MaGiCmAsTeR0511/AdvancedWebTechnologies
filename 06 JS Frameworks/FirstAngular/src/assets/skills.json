@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "angular", "hours": 5 },
+  { "id": 2, "name": "react", "hours": 3 },
+  { "id": 3, "name": "node", "hours": 2 }
+]
