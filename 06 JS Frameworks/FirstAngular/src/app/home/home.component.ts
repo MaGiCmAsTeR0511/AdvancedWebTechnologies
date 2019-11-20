@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private service: SkillsService) {}
 
   skills: Skill[];
+  showHeading = false;
 
   ngOnInit() {
     this.service.getSkills().subscribe(data => {
@@ -21,5 +22,9 @@ export class HomeComponent implements OnInit {
 
   selectSkill(s: Skill) {
     console.log("you selected", s);
+  }
+
+  toggleHeading() {
+    this.showHeading = !this.showHeading;
   }
 }
