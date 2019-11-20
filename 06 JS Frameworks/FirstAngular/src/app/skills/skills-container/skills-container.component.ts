@@ -9,7 +9,7 @@ import { Skill } from "../skill.model";
 })
 export class SkillsContainerComponent implements OnInit {
   constructor(private service: SkillsService) {}
-
+  displayedColumns: string[] = ["id", "name", "hours"];
   skills: Skill[];
   currentSkill: Skill;
   showHeading = false;

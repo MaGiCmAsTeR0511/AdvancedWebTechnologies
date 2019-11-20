@@ -1,6 +1,12 @@
-<div>
-  <div>id:<input type="text" [(ngModel)]="skill.id" /></div>
-  <div>name:<input type="text" [(ngModel)]="skill.name" /></div>
-  <div>hours:<input type="text" [(ngModel)]="skill.hours" /></div>
-  <button (click)="saveSkill()">Save</button>
+<div class="form-container">
+  <mat-form-field>
+    <input matInput placeholder="Id" type="text" [(ngModel)]="skill.id" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Name" type="text" [(ngModel)]="skill.name" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Hours" type="text" [(ngModel)]="skill.hours" />
+  </mat-form-field>
+  <button mat-raised-button (click)="saveSkill()">Save</button>
 </div>
