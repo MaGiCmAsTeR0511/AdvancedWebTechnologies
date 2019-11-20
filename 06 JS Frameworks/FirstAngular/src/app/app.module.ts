@@ -8,13 +8,19 @@ import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { SidebarComponent } from "./shared/sidebar/sidebar.component";
 import { HomeComponent } from "./home/home.component";
+import { SkillsContainerComponent } from './skills/skills-container/skills-container.component';
+import { SkillEditComponent } from './skills/skill-edit/skill-edit.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    SkillsContainerComponent,
+    SkillEditComponent,
+    AboutComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

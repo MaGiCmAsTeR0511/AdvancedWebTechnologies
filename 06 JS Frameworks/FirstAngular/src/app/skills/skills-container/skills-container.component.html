@@ -1,0 +1,9 @@
+<h3 *ngIf="showHeading">{{ getGreeting() }}</h3>
+<button (click)="toggleHeading()">Toggle Heading</button>
+<div *ngFor="let s of skills" (click)="selectSkill(s)">{{ s.name }}</div>
+
+<app-skill-edit
+  [skill]="currentSkill"
+  *ngIf="currentSkill"
+  (onSkillSaved)="saveSkill($event)"
+></app-skill-edit>

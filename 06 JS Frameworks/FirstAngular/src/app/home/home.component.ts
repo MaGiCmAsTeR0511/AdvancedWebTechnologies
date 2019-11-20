@@ -8,23 +8,5 @@ import { Skill } from "../skills/skill.model";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-  constructor(private service: SkillsService) {}
-
-  skills: Skill[];
-  showHeading = false;
-
-  ngOnInit() {
-    this.service.getSkills().subscribe(data => {
-      this.skills = data;
-      console.log("skills", data);
-    });
-  }
-
-  selectSkill(s: Skill) {
-    console.log("you selected", s);
-  }
-
-  toggleHeading() {
-    this.showHeading = !this.showHeading;
-  }
+  ngOnInit(): void {}
 }
