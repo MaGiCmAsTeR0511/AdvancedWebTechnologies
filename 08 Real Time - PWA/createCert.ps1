@@ -20,7 +20,7 @@ If (!(test-path $tmpPath)) {
 }
 
 # set certificate password here
-$pfxPassword = ConvertTo-SecureString -String "Pa$$word" -Force -AsPlainText
+$pfxPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
 $pfxFilePath = "$tmpPath\localhost.pfx"
 $cerFilePath = "$tmpPath\localhost.cer"
 
