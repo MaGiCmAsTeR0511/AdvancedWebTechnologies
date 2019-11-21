@@ -1,9 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { Skill } from "./skills.model";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class SkillsService {
+  constructor(private httpClient: HttpClient) {}
 
-  constructor() { }
+  getSkills(): Observable<Skill[]> {
+    return this.httpClient.get<Skill[]>("assets/skills.json");
+  }
 }

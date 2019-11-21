@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  background-color: lightgreen;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+
+.col {
+  margin: 0 1rem;
+  min-width: 100px;
+}
