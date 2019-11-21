@@ -1,6 +1,11 @@
 <div class="skill-container">
   <h3 *ngIf="showHeading" class="header-skill">{{ getGreeting() }}</h3>
-  <button mat-raised-button (click)="toggleHeading()" color="accent">
+  <button
+    mat-raised-button
+    (click)="toggleHeading()"
+    color="accent"
+    class="toggleheading"
+  >
     Toggle Heading
   </button>
   <table mat-table [dataSource]="skills" class="datatable">
