@@ -9,7 +9,11 @@ import { Skill } from "../skills.model";
 })
 export class SkillsListComponent implements OnInit {
   constructor(private service: SkillsService) {}
+  displayedColumns: string[] = ["id", "name", "hours", "actions"];
   skills: Skill[];
+  currentSkill: Skill = { id: 0, name: "", hours: 0 };
+  showFormAdd = false;
+  dataSource = this.service.getSkills();
 
   ngOnInit() {
     this.service.getSkills().subscribe(data => {
@@ -19,5 +23,23 @@ export class SkillsListComponent implements OnInit {
 
   deleteSkill(s: Skill) {
     this.service.deleteSkill(s);
+  }
+
+  selectSkill(s: Skill) {
+    console.log(s);
+    this.currentSkill = { ...s };
+  }
+
+  /*toggleHeadingNewSkill() {
+    this.showFormAdd = !this.showFormAdd;
+  }*/
+
+  addSkill() {
+    this.currentSkill = { id: 0, name: "", hours: 0 };
+  }
+
+  saveSkill(updated: Skill) {
+    this.skills = this.skills.filter(s => s.id != updated.id);
+    this.skills.push(updated);
   }
 }

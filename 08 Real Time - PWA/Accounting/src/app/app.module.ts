@@ -8,15 +8,26 @@ import { SkillsEditComponent } from "./skills/skills-edit/skills-edit.component"
 import { KpiBarComponent } from "./kpi-bar/kpi-bar.component";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { SkillsAddComponent } from "./skills/skills-add/skills-add.component";
+import { MaterialModule } from "./material.modules";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillsListComponent,
     SkillsEditComponent,
-    KpiBarComponent
+    KpiBarComponent,
+    SkillsAddComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    MaterialModule,
+    BrowserAnimationsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

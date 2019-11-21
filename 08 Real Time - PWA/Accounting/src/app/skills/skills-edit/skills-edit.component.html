@@ -1,3 +1,13 @@
 <div>
-  <button (click)="addSkill()">Add Skill</button>
+  <div class="form-container">
+    <input matInput placeholder="Id" type="text" [(ngModel)]="skill.id" />
+
+    <input matInput placeholder="Name" type="text" [(ngModel)]="skill.name" />
+
+    <input matInput placeholder="Hours" type="text" [(ngModel)]="skill.hours" />
+
+    <button mat-raised-button (click)="addSkill()" color="primary">
+      Add Skill
+    </button>
+  </div>
 </div>

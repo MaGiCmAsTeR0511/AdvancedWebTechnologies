@@ -29,7 +29,19 @@ export class SkillsService {
   }
 
   addSkill(s: Skill) {
-    this.arrSkills.push(s);
+    if (s.id == 0) {
+      const maxId = this.arrSkills.reduce(
+        (max, character) => (character.id > max ? character.id : max),
+        this.arrSkills[0].id
+      );
+      s.id = maxId + 1;
+      this.arrSkills.push(s);
+    } else {
+      let searcheditem = this.arrSkills.find(item => item.id == s.id);
+      let index = this.arrSkills.indexOf(searcheditem);
+      this.arrSkills[index] = s;
+    }
+
     this.skills.next(this.arrSkills);
   }
 

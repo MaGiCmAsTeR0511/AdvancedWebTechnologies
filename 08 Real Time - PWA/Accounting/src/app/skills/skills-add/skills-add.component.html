@@ -1,0 +1,18 @@
+<div>
+  <div class="form-container">
+    <mat-form-field>
+      <input matInput placeholder="Name" type="text" [(ngModel)]="skill.name" />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Hours"
+        type="number"
+        [(ngModel)]="skill.hours"
+      />
+    </mat-form-field>
+    <button mat-raised-button (click)="saveSkill()" color="primary">
+      save Skill
+    </button>
+  </div>
+</div>
