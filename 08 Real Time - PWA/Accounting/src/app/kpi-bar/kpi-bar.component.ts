@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { SkillsService } from "../skills/skills.service";
-import { Skill } from "../skills/skills.model";
 
 @Component({
   selector: "app-kpi-bar",

@@ -16,4 +16,8 @@ export class SkillsListComponent implements OnInit {
       this.skills = data;
     });
   }
+
+  deleteSkill(s: Skill) {
+    this.service.deleteSkill(s);
+  }
 }

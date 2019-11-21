@@ -2,5 +2,8 @@
   <div class="row" *ngFor="let s of skills">
     <div class="col">{{ s.name }}</div>
     <div class="col">{{ s.hours }}</div>
+    <div class="coll">
+      <a style="cursor: pointer" (click)="deleteSkill(s)">Delete</a>
+    </div>
   </div>
 </div>
