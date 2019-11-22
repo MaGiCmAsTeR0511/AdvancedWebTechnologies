@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SkillsApi
 {
-    // [Authorize]
+    [Authorize]
     [Route("api/skills")]
     public class SkillsController : Microsoft.AspNetCore.Mvc.Controller
     {
@@ -68,7 +68,7 @@ namespace SkillsApi
         }
 
         [HttpPut]
-         public ActionResult Put([FromBody]Skill value) //Classic .NET Core WebApi pattern: public void Put(int id, [FromBody]Skill value)
+        public ActionResult Put([FromBody]Skill value) //Classic .NET Core WebApi pattern: public void Put(int id, [FromBody]Skill value)
         {
             ctx.Skills.Attach(value);
             ctx.Entry(value).State = EntityState.Modified;

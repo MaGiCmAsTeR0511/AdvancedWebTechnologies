@@ -2,12 +2,13 @@ export const environment = {
   production: false,
   token: "QeOv74uiEDNz7QM91bjYKc82VgS2",
   firebase: {
-    apiKey: "AIzaSyAed-OAkXVgn_BHewFkPgUWQO8o1t-Kcuk",
-    authDomain: "xskills-661db.firebaseapp.com",
-    databaseURL: "https://xskills-661db.firebaseio.com",
-    projectId: "xskills-661db",
-    storageBucket: "",
-    messagingSenderId: "308138681179",
-    appId: "1:308138681179:web:b7e4b089734417ff"
+    apiKey: "AIzaSyDALcw1iiyrDdiq8yyWIzUg9JAGZWUwe6c",
+    authDomain: "test-24f37.firebaseapp.com",
+    databaseURL: "https://test-24f37.firebaseio.com",
+    projectId: "test-24f37",
+    storageBucket: "test-24f37.appspot.com",
+    messagingSenderId: "512664287889",
+    appId: "1:512664287889:web:69266c0bce83f4f39e1d30",
+    measurementId: "G-9QLD7QYLY8"
   }
 };

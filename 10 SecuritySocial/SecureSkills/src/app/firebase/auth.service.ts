@@ -6,6 +6,16 @@ import { environment } from "src/environments/environment";
 @Injectable()
 export class AuthService {
   constructor(private fireAuth: AngularFireAuth) {
+    this.handeAuthChange();
+  }
+
+  private fbUser: firebase.User = null;
+
+  public User: BehaviorSubject<firebase.User> = new BehaviorSubject(
+    this.fbUser
+  );
+
+  private handeAuthChange() {
     this.fireAuth.auth.onAuthStateChanged(user => {
       if (user) {
         this.fbUser = user;
@@ -19,12 +29,6 @@ export class AuthService {
       }
     });
   }
-
-  private fbUser: firebase.User = null;
-
-  public User: BehaviorSubject<firebase.User> = new BehaviorSubject(
-    this.fbUser
-  );
 
   isAuthenticated(): boolean {
     return this.fbUser == null;
